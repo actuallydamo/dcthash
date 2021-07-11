@@ -1,0 +1,18 @@
+module Magick
+  class Enum
+  end
+  class FilterType < Enum
+  end
+  PointFilter: FilterType
+  class ColorspaceType < Enum
+  end
+  GRAYColorspace: ColorspaceType
+  class DitherMethod < Enum
+  end
+  NoDitherMethod: DitherMethod
+  class Image
+    def quantize: (?Numeric, ?Magick::ColorspaceType, ?Magick::DitherMethod, ?Integer, ?bool) -> Magick::Image
+    def resize!: ((Float | Integer), ?(Float | Integer), ?Magick::FilterType, ?Float) -> Magick::Image
+    def export_pixels: (?Numeric, ?Numeric, ?Numeric, ?Numeric, ?String) -> Array[Numeric]
+  end
+end

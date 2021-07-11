@@ -1,0 +1,18 @@
+module Dcthash
+  VERSION: String
+  EDGE_SIZE: Integer
+  SUBSAMPLE_START: Integer
+  SUBSAMPLE_END: Integer
+
+  def self.distance: (String, String) -> Integer
+
+  def self.similar?: (String, String, ?Integer) -> bool
+
+  def self.calculate: (Magick::Image) -> String
+
+  def self.median: (Array[Float]) -> Float
+
+  def self.dct: (Array[Numeric]) -> Array[Float]
+
+  def self.dct_2d: (Array[Array[Numeric]]) -> Array[Array[Float]]
+end

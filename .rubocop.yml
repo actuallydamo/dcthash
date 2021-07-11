@@ -1,0 +1,25 @@
+require:
+  - rubocop-rspec
+  - rubocop-performance
+
+Metrics/BlockLength:
+  IgnoredMethods: ['describe', 'context']
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Metrics/AbcSize:
+  Max: 65
+
+Metrics/MethodLength:
+  Max: 30
+
+Metrics/ModuleLength:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Max: 4
+
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 2.7
